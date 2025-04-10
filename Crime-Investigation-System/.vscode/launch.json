@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - OfficerHome",
+            "request": "launch",
+            "mainClass": "UI.OfficerHome",
+            "projectName": "Crime-Investigation-System"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Home",
+            "request": "launch",
+            "mainClass": "UI.Home",
+            "projectName": "Crime-Investigation-System"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Officerlogin",
+            "request": "launch",
+            "mainClass": "UI.Officerlogin",
+            "projectName": "Crime-Investigation-System"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - NewOfficerRegistration",
+            "request": "launch",
+            "mainClass": "UI.NewOfficerRegistration",
+            "projectName": "Crime-Investigation-System"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - AdminContact",
+            "request": "launch",
+            "mainClass": "UI.AdminContact",
+            "projectName": "Crime-Investigation-System"
+        }
+    ]
+}
