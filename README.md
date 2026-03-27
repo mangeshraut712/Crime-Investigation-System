@@ -1,96 +1,70 @@
-# Crime Investigation System
+<div align="center">
 
-The **Crime Investigation System** is a Java-based application designed to manage and streamline crime investigation processes. It includes features for managing police officers, FIRs (First Information Reports), cases, and criminals. The system also integrates with a MySQL database for data storage and retrieval.
+# 🕵️ Crime Investigation System
+
+A Java desktop application for managing FIRs, officers, cases, and criminal records.
+
+![Java](https://img.shields.io/badge/Java-Swing-orange?style=flat&logo=java&logoColor=white)
+![Swing](https://img.shields.io/badge/Swing-UI-007396?style=flat)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479a1?style=flat&logo=mysql&logoColor=white)
+![JDBC](https://img.shields.io/badge/JDBC-Connectivity-4B8BBE?style=flat)
+![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey?style=flat)
+
+</div>
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Stack](#stack)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [License](#license)
+- [Contact](#contact)
+
+## Overview
+
+Crime Investigation System is an Eclipse-friendly Swing application for police-station workflows. It centralizes officer registration, FIR handling, case tracking, and criminal record management while storing data in MySQL through JDBC.
 
 ## Features
 
-- **Police Officer Management**: Register and manage police officers.
-- **FIR Management**: Create, search, and delete FIRs.
-- **Case Management**: Create, search, and delete cases.
-- **Criminal Management**: Add, search, and delete criminal records.
-- **Admin Contact**: Provide feedback or suggestions to the admin.
-- **About Us**: Information about the system.
+- Officer registration and authentication screens.
+- FIR create, search, display, and delete flows.
+- Case and criminal record management from the same desktop UI.
+- Admin contact and about screens for feedback and system context.
+- Database-backed storage with a bundled MySQL connector JAR.
+
+## Stack
+
+- Language: Java 8+.
+- UI: Swing and WindowBuilder-generated forms.
+- Data: MySQL, JDBC, and the provided SQL seed script.
+- Tooling: Eclipse project metadata plus a local connector JAR.
+
+## Quick Start
+
+1. Import the project into Eclipse or another Java IDE as an existing Java project.
+2. Run `Database/crimeinvestigations.sql` in MySQL to create the schema.
+3. Update the JDBC connection in `CrimeDB_Functions.java` if your MySQL credentials differ.
+4. Launch the `Home` class from `src/UI` to open the application.
 
 ## Project Structure
 
+```text
+.
+├── Database/crimeinvestigations.sql   # Database schema and seed data
+├── Jar File/mysql-connector-java-8.0.11.jar
+├── src/
+│   ├── DB/                            # JDBC helpers and database utilities
+│   └── UI/                            # Login, FIR, case, and record screens
+├── .classpath / .project              # Eclipse project files
+└── .settings/ / wbp-meta/             # IDE and WindowBuilder metadata
 ```
-Crime-Investigation-System/
-├── .classpath                # Eclipse classpath configuration
-├── .project                  # Eclipse project configuration
-├── .settings/                # Eclipse settings
-├── .vscode/                  # VS Code launch configurations
-├── bin/                      # Compiled Java classes and resources
-├── src/                      # Source code
-│   ├── DB/                   # Database-related classes
-│   ├── UI/                   # User interface classes
-│   └── org/                  # Other packages
-├── Database/                 # SQL scripts for database setup
-│   └── crimeinvestigations.sql
-├── Jar File/                 # External JAR dependencies
-│   └── mysql-connector-java-8.0.11.jar
-├── wbp-meta/                 # Eclipse WindowBuilder metadata
-└── .gitignore                # Git ignore file
-```
-
-## Prerequisites
-
-- **Java Development Kit (JDK)**: Version 8 or higher.
-- **MySQL Database**: Ensure MySQL is installed and running.
-- **Eclipse IDE** (optional): For development and debugging.
-- **MySQL Connector JAR**: Included in the `Jar File` directory.
-
-## Setup Instructions
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/mangeshraut712/Crime-Investigation-System.git
-   cd Crime-Investigation-System
-   ```
-
-2. **Import the Project**:
-   - Open Eclipse or your preferred IDE.
-   - Import the project as an existing Java project.
-
-3. **Set Up the Database**:
-   - Open MySQL Workbench or any MySQL client.
-   - Execute the SQL script located at `Database/crimeinvestigations.sql` to create the database and tables.
-
-4. **Configure Database Connection**:
-   - Update the database connection details in `CrimeDB_Functions.java`:
-     ```java
-     con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrimeInvestigations?useSSL=false", "root", "root");
-     ```
-
-5. **Run the Application**:
-   - Run the `Home` class from the `src/UI` package to start the application.
-
-## Screenshots
-
-- **Login Page**: Allows officers and admins to log in.
-- **FIR Management**: Create and view FIRs.
-- **Case Management**: Manage case details.
-- **Criminal Records**: Add and search for criminals.
-
-## Technologies Used
-
-- **Java**: Core programming language.
-- **Swing**: For building the graphical user interface.
-- **MySQL**: For database management.
-- **JDBC**: For database connectivity.
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Commit your changes and push them to your fork.
-4. Submit a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+Licensed under the MIT License. See [LICENSE](LICENSE).
 
 ## Contact
 
-For any queries or feedback, please contact the admin through the **Admin Contact** feature in the application.
+Use the in-app **Admin Contact** screen to share feedback or suggestions.
