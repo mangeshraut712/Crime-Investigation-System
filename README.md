@@ -78,6 +78,23 @@ Crime-Investigation-System/
 - **MySQL**: For database management.
 - **JDBC**: For database connectivity.
 
+---
+
+<!-- codex:project-diagram:start -->
+
+## Project Diagram
+
+```mermaid
+flowchart LR
+    A["User"] --> B["Desktop UI"]
+    B --> C["Core Logic"]
+    C --> D["Database"]
+```
+
+_Desktop application structure from interface to persistence layer._
+
+<!-- codex:project-diagram:end -->
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
