@@ -1,6 +1,11 @@
 # Crime Investigation System
 
-The **Crime Investigation System** is a Java-based application designed to manage and streamline crime investigation processes. It includes features for managing police officers, FIRs (First Information Reports), cases, and criminals. The system also integrates with a MySQL database for data storage and retrieval.
+[![Java](https://img.shields.io/badge/Java-8%2B-orange?logo=openjdk&logoColor=white)](https://www.java.com/)
+[![MySQL](https://img.shields.io/badge/MySQL-8-blue?logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![UI](https://img.shields.io/badge/UI-Java%20Swing-6DB33F)](https://docs.oracle.com/javase/tutorial/uiswing/)
+[![GitHub last commit](https://img.shields.io/github/last-commit/mangeshraut712/Crime-Investigation-System)](https://github.com/mangeshraut712/Crime-Investigation-System)
+
+Desktop Java application for managing police officers, FIRs, cases, and criminal records, with MySQL persistence.
 
 ## Features
 
@@ -11,25 +16,33 @@ The **Crime Investigation System** is a Java-based application designed to manag
 - **Admin Contact**: Provide feedback or suggestions to the admin.
 - **About Us**: Information about the system.
 
+## Screenshots
+
+Captured from the Swing UI in 2026 (Home does not require MySQL; FIR and Case record views are the existing display screens populated from sample investigation fields).
+
+### Home
+
+![Crime Investigation System home screen](docs/screenshots/home.png)
+
+### FIR record
+
+![First Information Report display](docs/screenshots/fir-display.png)
+
+### Case report
+
+![Case report display](docs/screenshots/case-display.png)
+
 ## Project Structure
 
 ```
-Crime-Investigation-System/
-├── .classpath                # Eclipse classpath configuration
-├── .project                  # Eclipse project configuration
-├── .settings/                # Eclipse settings
-├── .vscode/                  # VS Code launch configurations
-├── bin/                      # Compiled Java classes and resources
-├── src/                      # Source code
-│   ├── DB/                   # Database-related classes
-│   ├── UI/                   # User interface classes
-│   └── org/                  # Other packages
-├── Database/                 # SQL scripts for database setup
-│   └── crimeinvestigations.sql
-├── Jar File/                 # External JAR dependencies
+.
+├── Crime-Investigation-System/   # Eclipse/Java sources (UI, DB)
+├── Database/
+│   └── crimeinvestigations.sql   # MySQL schema
+├── Jar File/
 │   └── mysql-connector-java-8.0.11.jar
-├── wbp-meta/                 # Eclipse WindowBuilder metadata
-└── .gitignore                # Git ignore file
+├── docs/screenshots/             # UI captures
+└── README.md
 ```
 
 ## Prerequisites
@@ -49,27 +62,20 @@ Crime-Investigation-System/
 
 2. **Import the Project**:
    - Open Eclipse or your preferred IDE.
-   - Import the project as an existing Java project.
+   - Import `Crime-Investigation-System/` as an existing Java project.
 
 3. **Set Up the Database**:
    - Open MySQL Workbench or any MySQL client.
    - Execute the SQL script located at `Database/crimeinvestigations.sql` to create the database and tables.
 
 4. **Configure Database Connection**:
-   - Update the database connection details in `CrimeDB_Functions.java`:
+   - Update the database connection details in `Crime-Investigation-System/src/DB/CrimeDB_Functions.java`:
      ```java
      con = DriverManager.getConnection("jdbc:mysql://localhost:3306/CrimeInvestigations?useSSL=false", "root", "root");
      ```
 
 5. **Run the Application**:
    - Run the `Home` class from the `src/UI` package to start the application.
-
-## Screenshots
-
-- **Login Page**: Allows officers and admins to log in.
-- **FIR Management**: Create and view FIRs.
-- **Case Management**: Manage case details.
-- **Criminal Records**: Add and search for criminals.
 
 ## Technologies Used
 
@@ -110,4 +116,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-For any queries or feedback, please contact the admin through the **Admin Contact** feature in the application.
+For queries or feedback, use the **Admin Contact** screen in the application.
